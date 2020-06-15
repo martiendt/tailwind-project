@@ -16,6 +16,10 @@ npm install tailwindcss post-cli autoprefixer
 
 ```
 npx tailwind init
+
+or
+
+npx tailwind init tailwind-full.config.js --full
 ```
 
 3. Create postcss.config.js file
@@ -51,4 +55,21 @@ module.exports = {
 
 ```
 npm install -g live-server
+```
+
+7. Optimize production build with remove unused css with [purgecss.com](https://purgecss.com)
+
+```
+npm install @fullhuman/postcss-purgecss
+```
+
+and add in postcss.config.js
+
+```
+process.env.NODE_ENV === 'production' && require('@fullhuman/postcss-purgecss')({
+  content: [
+    './public/index.html'
+  ],
+  defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
+})
 ```
