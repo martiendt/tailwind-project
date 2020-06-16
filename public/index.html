@@ -14,21 +14,30 @@
     .side-menu {
       -ms-overflow-style: none;
     }
+
+    .mobile {
+      width: 460px;
+      padding: 1rem;
+    }
   </style>
 </head>
 <body class="flex">
-  <header class="flex flex-1 flex-col fixed mx-56 w-full h-16 bg-purple-700 text-gray-100 p-5">
+  <header class="flex shadow flex-1 flex-col fixed mx-56 w-full h-16 bg-purple-700 text-gray-100 p-5">
     <div class="flex justify-between mr-56">
       <div>LOGO</div>
       <div class="flex">
         <div class="mr-5">TOGGLE PREVIEW</div>
-        <div>DEVICE</div>
+        <div class="mr-5">DEVICE</div>
+        <div class="flex">
+          <div class="px-1">LIGHT</div>
+          <div class="px-1">DARK</div>
+        </div>
       </div>
     </div>
   </header>
-  <nav class="flex w-56 flex-col h-screen bg-gray-200">
-    <div class="fixed w-56 h-screen p-4 bg-gray-200">
-      <div class="side-menu h-screen overflow-y-scroll">
+  <nav class="flex shadow w-56 flex-col h-screen bg-gray-300">
+    <div class="flex flex-col fixed w-56 h-screen bg-gray-300">
+      <div class="side-menu p-4 h-screen overflow-y-scroll">
         <button class="shadow-lg bg-white w-full h-24 mb-4"></button>
         <button class="shadow-lg bg-white w-full h-24 mb-4"></button>
         <button class="shadow-lg bg-white w-full h-24 mb-4"></button>
@@ -41,27 +50,15 @@
         <button class="shadow-lg bg-white w-full h-24 mb-4"></button>
         <button class="shadow-lg bg-white w-full h-24 mb-4"></button>
       </div>
+      <div class="flex text-center h-16">
+        <a href="#" class="flex-1 pt-5 pb-2 bg-gray-800 text-white">MENU</a>
+        <a href="#" class="flex-1 pt-5 pb-2 bg-gray-800 text-white">MENU</a>
+        <a href="#" class="flex-1 pt-5 pb-2 bg-gray-800 text-white">MENU</a>
+      </div>
     </div>
   </nav>
-  <section class="w-full flex-1 mt-16 bg-gray-100">
-    <div id="preview"></div>
+  <section class="w-full flex-1 mt-16 bg-gray-100 mobile">
+    <iframe id="preview" src="http://127.0.0.1:8080/example.html" frameborder="0" class="w-full h-screen"></iframe>
   </section>
-  <script>
-    var preview = document.getElementById('preview')
-      
-    fetch('/example.html').then(function (response) {
-      // The API call was successful!
-      return response.text()
-    }).then(function (text) {
-      // Get body and append to preview
-      const parser = new DOMParser();
-      const htmlDocument = parser.parseFromString(text, "text/html");
-      const body = htmlDocument.documentElement.querySelector("body");
-      preview.innerHTML = body.innerHTML
-    }).catch(function (err) {
-      // There was an error
-      console.warn('Something went wrong.', err)
-    })
-  </script>
 </body>
 </html>
