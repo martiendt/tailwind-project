@@ -17,8 +17,17 @@
   </style>
 </head>
 <body class="flex">
-  <nav class="flex flex-grow-0 flex-shrink-0 flex-col w-56 h-screen bg-gray-200">
-    <div class="fixed w-56 h-screen p-4">
+  <header class="flex flex-1 flex-col fixed mx-56 w-full h-16 bg-purple-700 text-gray-100 p-5">
+    <div class="flex justify-between mr-56">
+      <div>LOGO</div>
+      <div class="flex">
+        <div class="mr-5">TOGGLE PREVIEW</div>
+        <div>DEVICE</div>
+      </div>
+    </div>
+  </header>
+  <nav class="flex w-56 flex-col h-screen bg-gray-200">
+    <div class="fixed w-56 h-screen p-4 bg-gray-200">
       <div class="side-menu h-screen overflow-y-scroll">
         <button class="shadow-lg bg-white w-full h-24 mb-4"></button>
         <button class="shadow-lg bg-white w-full h-24 mb-4"></button>
@@ -34,41 +43,25 @@
       </div>
     </div>
   </nav>
-  <header class="flex flex-col fixed mx-56 w-full h-16 bg-purple-700 text-gray-100 p-5">
-    <div class="flex justify-between mr-56">
-      <div>LOGO</div>
-      <div class="flex">
-        <div class="mr-5">TOGGLE PREVIEW</div>
-        <div>DEVICE</div>
-      </div>
-    </div>
-  </header>
-  <section class="w-full mt-16 bg-gray-100">
-    <iframe id="preview" frameborder="0" class="w-full h-screen"></iframe>
+  <section class="w-full flex-1 mt-16 bg-gray-100">
+    <div id="preview"></div>
   </section>
   <script>
-    var iframe = document.getElementById('preview')
-    var doc = iframe.document
-    if(iframe.contentDocument)
-      doc = iframe.contentDocument // For NS6
-    else if(iframe.contentWindow)
-      doc = iframe.contentWindow.document // For IE5.5 and IE6
+    var preview = document.getElementById('preview')
       
     fetch('/example.html').then(function (response) {
       // The API call was successful!
       return response.text()
-    }).then(function (html) {
-      // This is the HTML from our response as a text string
-      console.log(html)
-      // Put the content in the iframe
-      doc.open()
-      doc.writeln(html)
-      doc.close()
+    }).then(function (text) {
+      // Get body and append to preview
+      const parser = new DOMParser();
+      const htmlDocument = parser.parseFromString(text, "text/html");
+      const body = htmlDocument.documentElement.querySelector("body");
+      preview.innerHTML = body.innerHTML
     }).catch(function (err) {
       // There was an error
       console.warn('Something went wrong.', err)
     })
-    iframe.document.close()
   </script>
 </body>
 </html>
