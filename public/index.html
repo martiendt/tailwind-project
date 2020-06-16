@@ -4,35 +4,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="/build/tailwind.css">
+  <style>
+    /* Hide scrollbar */
+    .side-menu::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE and Edge */
+    .side-menu {
+      -ms-overflow-style: none;
+    }
+  </style>
 </head>
-<body>
-  <section>
-    <div class="flex">
-      <div class="flex flex-col w-56 h-screen fixed bg-gray-200">
-        <div class="overflow-y-scroll m-4">
-          <button class="bg-white w-full h-24 mt-4"></button>
-          <button class="bg-white w-full h-24 mt-4"></button>
-          <button class="bg-white w-full h-24 mt-4"></button>
-          <button class="bg-white w-full h-24 mt-4"></button>
-          <button class="bg-white w-full h-24 mt-4"></button>
-          <button class="bg-white w-full h-24 mt-4"></button>
-          <button class="bg-white w-full h-24 mt-4"></button>
-          <button class="bg-white w-full h-24 mt-4"></button>
-          <button class="bg-white w-full h-24 mt-4"></button>
-          <button class="bg-white w-full h-24 mt-4"></button>
-          <button class="bg-white w-full h-24 mt-4"></button>
-        </div>
-      </div>
-      <div class="flex-1 min-h-screen ml-56">
-        <div class="flex flex-col">
-          <div class="w-full h-16 bg-indigo-500 fixed">
-          </div>
-          <div class="mt-16">
-            <iframe id="preview" frameborder="0" class="h-screen w-full"></iframe>
-          </div>
-        </div>
+<body class="flex">
+  <nav class="flex flex-grow-0 flex-shrink-0 flex-col w-56 h-screen bg-gray-200">
+    <div class="fixed w-56 h-screen p-4">
+      <div class="side-menu h-screen overflow-y-scroll">
+        <button class="shadow-lg bg-white w-full h-24 mb-4"></button>
+        <button class="shadow-lg bg-white w-full h-24 mb-4"></button>
+        <button class="shadow-lg bg-white w-full h-24 mb-4"></button>
+        <button class="shadow-lg bg-white w-full h-24 mb-4"></button>
+        <button class="shadow-lg bg-white w-full h-24 mb-4"></button>
+        <button class="shadow-lg bg-white w-full h-24 mb-4"></button>
+        <button class="shadow-lg bg-white w-full h-24 mb-4"></button>
+        <button class="shadow-lg bg-white w-full h-24 mb-4"></button>
+        <button class="shadow-lg bg-white w-full h-24 mb-4"></button>
+        <button class="shadow-lg bg-white w-full h-24 mb-4"></button>
+        <button class="shadow-lg bg-white w-full h-24 mb-4"></button>
       </div>
     </div>
+  </nav>
+  <header class="flex flex-col fixed mx-56 w-full h-16 bg-purple-700 text-gray-100 p-5">
+    <div class="flex justify-between mr-56">
+      <div>LOGO</div>
+      <div class="flex">
+        <div class="mr-5">TOGGLE PREVIEW</div>
+        <div>DEVICE</div>
+      </div>
+    </div>
+  </header>
+  <section class="w-full mt-16 bg-gray-100">
+    <iframe id="preview" frameborder="0" class="w-full h-screen"></iframe>
   </section>
   <script>
     var iframe = document.getElementById('preview')
