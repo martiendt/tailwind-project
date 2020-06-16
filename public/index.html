@@ -17,9 +17,9 @@
   </style>
 </head>
 <body class="flex">
-  <header class="flex shadow flex-1 flex-col fixed mx-56 w-full h-16 bg-purple-700 text-gray-100 p-5">
+  <header class="flex shadow-md flex-1 flex-col fixed mx-56 w-full h-16 bg-gray-100 text-gray-900 p-5">
     <div class="flex justify-between mr-56">
-      <div>LOGO</div>
+      <div>TITLE</div>
       <div class="flex">
         <div class="mr-5">TOGGLE PREVIEW</div>
         <div class="mr-5">DEVICE</div>
@@ -30,25 +30,234 @@
       </div>
     </div>
   </header>
-  <nav class="flex shadow w-56 flex-col h-screen bg-gray-300">
-    <div class="flex flex-col fixed w-56 h-screen bg-gray-300">
+  <nav class="flex flex-col shadow-inner w-56 h-screen bg-gray-300">
+    <div class="flex flex-col fixed w-56 h-screen bg-gray-700">
+      <div class="h-16 w-full shadow-md p-5 bg-gray-800 text-gray-100 text-center">LOGO</div>
       <div class="side-menu p-4 h-screen overflow-y-scroll">
-        <button class="shadow-lg bg-white w-full h-24 mb-4"></button>
-        <button class="shadow-lg bg-white w-full h-24 mb-4"></button>
-        <button class="shadow-lg bg-white w-full h-24 mb-4"></button>
-        <button class="shadow-lg bg-white w-full h-24 mb-4"></button>
-        <button class="shadow-lg bg-white w-full h-24 mb-4"></button>
-        <button class="shadow-lg bg-white w-full h-24 mb-4"></button>
-        <button class="shadow-lg bg-white w-full h-24 mb-4"></button>
-        <button class="shadow-lg bg-white w-full h-24 mb-4"></button>
-        <button class="shadow-lg bg-white w-full h-24 mb-4"></button>
-        <button class="shadow-lg bg-white w-full h-24 mb-4"></button>
-        <button class="shadow-lg bg-white w-full h-24 mb-4"></button>
+        <button class="shadow-md bg-white w-full h-32 mb-4">
+          <svg class="p-2" width="100%" height="100%" viewBox="0 0 800 1021" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+                <rect id="path-1" x="0" y="0" width="800" height="1054" rx="7"></rect>
+                <filter x="-4.2%" y="-2.5%" width="108.4%" height="106.4%" filterUnits="objectBoundingBox" id="filter-2">
+                    <feOffset dx="0" dy="7" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                    <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                    <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+                    <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+                </filter>
+                <path d="M7.00720597,0 C3.13723297,0 0,3.12717073 0,7.00528091 L0,75 L800,75 L800,7.00528091 C800,3.1363711 796.85993,0 792.992794,0 L7.00720597,0 Z" id="path-3"></path>
+                <filter x="-0.2%" y="-2.0%" width="100.4%" height="108.0%" filterUnits="objectBoundingBox" id="filter-4">
+                    <feOffset dx="0" dy="3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                    <feColorMatrix values="0 0 0 0 0.796078431   0 0 0 0 0.796078431   0 0 0 0 0.796078431  0 0 0 1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+                </filter>
+                <rect id="path-5" x="0" y="0" width="800" height="217"></rect>
+                <filter x="-0.2%" y="-0.9%" width="100.5%" height="101.8%" filterUnits="objectBoundingBox" id="filter-6">
+                    <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+                    <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+                    <feColorMatrix values="0 0 0 0 0.768627451   0 0 0 0 0.784509804   0 0 0 0 0.803921569  0 0 0 1 0" type="matrix" in="shadowInnerInner1" result="shadowMatrixInner1"></feColorMatrix>
+                    <feOffset dx="0" dy="-4" in="SourceAlpha" result="shadowOffsetInner2"></feOffset>
+                    <feComposite in="shadowOffsetInner2" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner2"></feComposite>
+                    <feColorMatrix values="0 0 0 0 0.764705882   0 0 0 0 0.784313725   0 0 0 0 0.803921569  0 0 0 1 0" type="matrix" in="shadowInnerInner2" result="shadowMatrixInner2"></feColorMatrix>
+                    <feMerge>
+                        <feMergeNode in="shadowMatrixInner1"></feMergeNode>
+                        <feMergeNode in="shadowMatrixInner2"></feMergeNode>
+                    </feMerge>
+                </filter>
+                <path d="M113.408311,107.89401 L124.935226,115.965242 L123.788073,117.603546 L110.681641,108.426323 L111.054371,107.89401 L110.681641,107.361696 L123.788073,98.1844729 L124.935226,99.822777 L113.408311,107.89401 Z" id="path-7"></path>
+                <path d="M679.408311,107.89401 L690.935226,115.965242 L689.788073,117.603546 L676.681641,108.426323 L677.054371,107.89401 L676.681641,107.361696 L689.788073,98.1844729 L690.935226,99.822777 L679.408311,107.89401 Z" id="path-8"></path>
+                <path d="M0,0 L0,133.009479 C0,136.870237 3.14007048,140 7.00720597,140 L792.992794,140 C796.862767,140 800,136.862985 800,133.009479 L800,0 L0,0 Z" id="path-9"></path>
+                <filter x="-0.2%" y="-1.4%" width="100.5%" height="102.9%" filterUnits="objectBoundingBox" id="filter-10">
+                    <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+                    <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+                    <feColorMatrix values="0 0 0 0 0.764705882   0 0 0 0 0.784313725   0 0 0 0 0.803921569  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+                </filter>
+            </defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Style-Page">
+                    <g id="Group" transform="translate(-1.000000, 0.000000)">
+                        <g id="Platform">
+                            <g id="Rectangle-1" opacity="0.550213068">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                                <rect stroke="#979797" stroke-width="1" x="0.5" y="0.5" width="799" height="1053" rx="7"></rect>
+                            </g>
+                            <g id="top-bar">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                                <use fill="#DEDEDE" fill-rule="evenodd" xlink:href="#path-3"></use>
+                            </g>
+                            <g id="buttons" transform="translate(12.000000, 13.000000)" stroke="#979797">
+                                <circle id="Oval-1" fill="#E40000" cx="7.5" cy="7.5" r="7.5"></circle>
+                                <circle id="Oval-1" fill="#E2CB00" cx="30.5" cy="7.5" r="7.5"></circle>
+                                <circle id="Oval-1" fill="#71B21D" cx="51.5" cy="7.5" r="7.5"></circle>
+                            </g>
+                            <g id="outside-buttons" transform="translate(14.000000, 37.000000)" fill="#CBCBCB">
+                                <g id="left">
+                                    <rect id="Rectangle-3" x="0" y="0" width="57" height="28" rx="3"></rect>
+                                    <rect id="Rectangle-3" x="64" y="0" width="28" height="28" rx="3"></rect>
+                                </g>
+                                <g id="right" transform="translate(680.000000, 0.000000)">
+                                    <rect id="Rectangle-3" x="35" y="0" width="57" height="28" rx="3"></rect>
+                                    <rect id="Rectangle-3" x="0" y="0" width="28" height="28" rx="3"></rect>
+                                </g>
+                            </g>
+                            <rect id="address-bar" fill="#FFFFFF" x="113" y="37" width="574" height="28" rx="3"></rect>
+                            <text id="http://www.webaddres" font-family="HelveticaNeue-Light, Helvetica Neue" font-size="14" font-weight="300" fill="#4A4A4A">
+                                <tspan x="120" y="57">http://www.webaddress.com</tspan>
+                            </text>
+                            <text id="Home-Page" font-family="HelveticaNeue-Light, Helvetica Neue" font-size="15" font-weight="300" fill="#4A4A4A">
+                                <tspan x="361.645" y="24.8649632">Home Page</tspan>
+                            </text>
+                        </g>
+                        <g id="Nav" transform="translate(109.000000, 101.000000)" fill="#D8D8D8">
+                            <circle id="Oval-4" cx="294" cy="26" r="26"></circle>
+                            <rect id="Rectangle-8" x="-0.42578125" y="21" width="49.4228101" height="7.72727273" rx="3"></rect>
+                            <rect id="Rectangle-8" x="337.574219" y="22" width="49.4228101" height="7.72727273" rx="3"></rect>
+                            <rect id="Rectangle-8" x="62.7501065" y="21.7727273" width="49.4228101" height="7.72727273" rx="3"></rect>
+                            <rect id="Rectangle-8" x="401.750107" y="22.7727273" width="49.4228101" height="7.72727273" rx="3"></rect>
+                            <rect id="Rectangle-8" x="126.925994" y="21.7727273" width="49.4228101" height="7.72727273" rx="3"></rect>
+                            <rect id="Rectangle-8" x="465.925994" y="22.7727273" width="49.4228101" height="7.72727273" rx="3"></rect>
+                            <rect id="Rectangle-8" x="192.57719" y="21.7727273" width="49.4228101" height="7.72727273" rx="3"></rect>
+                            <rect id="Rectangle-8" x="531.57719" y="22.7727273" width="49.4228101" height="7.72727273" rx="3"></rect>
+                        </g>
+                        <g id="Header" transform="translate(0.000000, 177.000000)">
+                            <g id="bg">
+                                <use fill="#DADFE4" fill-rule="evenodd" xlink:href="#path-5"></use>
+                                <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                                <rect stroke="#979797" stroke-width="1" x="0.5" y="0.5" width="799" height="216"></rect>
+                            </g>
+                            <g id="text" transform="translate(245.000000, 75.000000)" fill="#C3C8CD">
+                                <rect id="Rectangle-13" x="30" y="0" width="250" height="25" rx="3"></rect>
+                                <rect id="Rectangle-13" x="0" y="38" width="310" height="12" rx="3"></rect>
+                                <rect id="Rectangle-13" x="0" y="58" width="310" height="12" rx="3"></rect>
+                            </g>
+                            <g id="Rectangle-16">
+                                <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-7"></use>
+                                <path stroke="#979797" stroke-width="1" d="M124.238862,99.6999892 L123.665286,98.8808372 L111.378005,107.484484 L111.664758,107.89401 L111.378005,108.303536 L123.665286,116.907182 L124.238862,116.08803 L112.536588,107.89401 L124.238862,99.6999892 Z"></path>
+                            </g>
+                            <g id="Rectangle-16" transform="translate(683.808433, 107.894010) scale(-1, 1) translate(-683.808433, -107.894010) ">
+                                <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-8"></use>
+                                <path stroke="#979797" stroke-width="1" d="M690.238862,99.6999892 L689.665286,98.8808372 L677.378005,107.484484 L677.664758,107.89401 L677.378005,108.303536 L689.665286,116.907182 L690.238862,116.08803 L678.536588,107.89401 L690.238862,99.6999892 Z M676.443983,107.89401 L676.644795,107.607221 L676.644795,108.180798 L676.443983,107.89401 Z"></path>
+                            </g>
+                        </g>
+                        <g id="Content" transform="translate(109.000000, 423.000000)">
+                            <g id="Row-2" transform="translate(2.000000, 236.000000)">
+                                <g id="Text-4" transform="translate(444.000000, 146.000000)">
+                                    <rect id="Rectangle-20" fill="#CFD3D6" x="0" y="31" width="136" height="9" rx="2"></rect>
+                                    <rect id="Rectangle-20" fill="#CFD3D6" x="0" y="17" width="136" height="9" rx="2"></rect>
+                                    <rect id="Rectangle-20" fill="#ACB2B8" x="0" y="0" width="62" height="12" rx="2"></rect>
+                                </g>
+                                <rect id="Rectangle-20" fill="#C3C8CD" x="443" y="0" width="136" height="136" rx="4"></rect>
+                                <g id="Text-3" transform="translate(296.000000, 146.000000)">
+                                    <rect id="Rectangle-20" fill="#CFD3D6" x="0" y="31" width="136" height="9" rx="2"></rect>
+                                    <rect id="Rectangle-20" fill="#CFD3D6" x="0" y="17" width="136" height="9" rx="2"></rect>
+                                    <rect id="Rectangle-20" fill="#ACB2B8" x="0" y="0" width="62" height="12" rx="2"></rect>
+                                </g>
+                                <rect id="Rectangle-20" fill="#C3C8CD" x="295" y="0" width="136" height="186" rx="4"></rect>
+                                <g id="Text-2" transform="translate(148.000000, 146.000000)">
+                                    <rect id="Rectangle-20" fill="#CFD3D6" x="0" y="31" width="136" height="9" rx="2"></rect>
+                                    <rect id="Rectangle-20" fill="#CFD3D6" x="0" y="17" width="136" height="9" rx="2"></rect>
+                                    <rect id="Rectangle-20" fill="#ACB2B8" x="0" y="0" width="62" height="12" rx="2"></rect>
+                                </g>
+                                <rect id="Rectangle-20" fill="#C3C8CD" x="147" y="0" width="136" height="136" rx="4"></rect>
+                                <g id="Text-1" transform="translate(0.000000, 146.000000)">
+                                    <rect id="Rectangle-20" fill="#CFD3D6" x="0" y="31" width="136" height="9" rx="2"></rect>
+                                    <rect id="Rectangle-20" fill="#CFD3D6" x="0" y="17" width="136" height="9" rx="2"></rect>
+                                    <rect id="Rectangle-20" fill="#ACB2B8" x="0" y="0" width="62" height="12" rx="2"></rect>
+                                </g>
+                                <rect id="Rectangle-20" fill="#C3C8CD" x="0" y="0" width="136" height="136" rx="4"></rect>
+                            </g>
+                            <g id="Row-1" transform="translate(0.000000, 32.000000)">
+                                <rect id="Rectangle-20" fill="#C3C8CD" x="444" y="0" width="136" height="136" rx="4"></rect>
+                                <rect id="Rectangle-20" fill="#C3C8CD" x="296" y="0" width="136" height="136" rx="4"></rect>
+                                <rect id="Rectangle-20" fill="#C3C8CD" x="148" y="0" width="136" height="136" rx="4"></rect>
+                                <rect id="Rectangle-20" fill="#C3C8CD" x="0" y="0" width="136" height="136" rx="4"></rect>
+                                <g id="Text-1" transform="translate(0.000000, 145.000000)">
+                                    <rect id="Rectangle-20" fill="#CFD3D6" x="0" y="31" width="136" height="9" rx="2"></rect>
+                                    <rect id="Rectangle-20" fill="#CFD3D6" x="0" y="17" width="136" height="9" rx="2"></rect>
+                                    <rect id="Rectangle-20" fill="#ACB2B8" x="0" y="0" width="62" height="12" rx="2"></rect>
+                                </g>
+                                <g id="Text-2" transform="translate(148.000000, 145.000000)">
+                                    <rect id="Rectangle-20" fill="#CFD3D6" x="0" y="31" width="136" height="9" rx="2"></rect>
+                                    <rect id="Rectangle-20" fill="#CFD3D6" x="0" y="17" width="136" height="9" rx="2"></rect>
+                                    <rect id="Rectangle-20" fill="#ACB2B8" x="0" y="0" width="62" height="12" rx="2"></rect>
+                                </g>
+                                <g id="Text-3" transform="translate(296.000000, 145.000000)">
+                                    <rect id="Rectangle-20" fill="#CFD3D6" x="0" y="31" width="136" height="9" rx="2"></rect>
+                                    <rect id="Rectangle-20" fill="#CFD3D6" x="0" y="17" width="136" height="9" rx="2"></rect>
+                                    <rect id="Rectangle-20" fill="#ACB2B8" x="0" y="0" width="62" height="12" rx="2"></rect>
+                                </g>
+                                <g id="Text-4" transform="translate(444.000000, 145.000000)">
+                                    <rect id="Rectangle-20" fill="#CFD3D6" x="0" y="31" width="136" height="9" rx="2"></rect>
+                                    <rect id="Rectangle-20" fill="#CFD3D6" x="0" y="17" width="136" height="9" rx="2"></rect>
+                                    <rect id="Rectangle-20" fill="#ACB2B8" x="0" y="0" width="62" height="12" rx="2"></rect>
+                                </g>
+                            </g>
+                            <g id="Filter" fill="#D8D8D8">
+                                <rect id="Rectangle-9" x="3.15318943" y="-0.359375" width="64.5038095" height="10.5989583" rx="3"></rect>
+                                <rect id="Rectangle-9" x="0.163498711" y="0.640625" width="64.5038095" height="10.5989583" rx="3"></rect>
+                                <rect id="Rectangle-9" x="86.9118674" y="1.05381944" width="64.5038095" height="10.5989583" rx="3"></rect>
+                                <rect id="Rectangle-9" x="83.9221767" y="2.05381944" width="64.5038095" height="10.5989583" rx="3"></rect>
+                                <rect id="Rectangle-9" x="170.670545" y="1.05381944" width="64.5038095" height="10.5989583" rx="3"></rect>
+                                <rect id="Rectangle-9" x="167.680855" y="2.05381944" width="64.5038095" height="10.5989583" rx="3"></rect>
+                                <rect id="Rectangle-9" x="256.35471" y="1.05381944" width="64.5038095" height="10.5989583" rx="3"></rect>
+                                <rect id="Rectangle-9" x="253.36502" y="2.05381944" width="64.5038095" height="10.5989583" rx="3"></rect>
+                                <rect id="Rectangle-9" x="427.72304" y="1.76041667" width="64.5038095" height="10.5989583" rx="3"></rect>
+                                <rect id="Rectangle-9" x="424.733349" y="2.76041667" width="64.5038095" height="10.5989583" rx="3"></rect>
+                                <rect id="Rectangle-9" x="342.038875" y="1.05381944" width="64.5038095" height="10.5989583" rx="3"></rect>
+                                <rect id="Rectangle-9" x="339.049184" y="2.05381944" width="64.5038095" height="10.5989583" rx="3"></rect>
+                                <rect id="Rectangle-9" x="515.332692" y="1.76041667" width="64.5038095" height="10.5989583" rx="3"></rect>
+                                <rect id="Rectangle-9" x="512.343001" y="2.76041667" width="64.5038095" height="10.5989583" rx="3"></rect>
+                            </g>
+                        </g>
+                        <g id="Footer" transform="translate(0.000000, 881.000000)">
+                            <g id="Rectangle-52">
+                                <use fill="#DADFE4" fill-rule="evenodd" xlink:href="#path-9"></use>
+                                <use fill="black" fill-opacity="1" filter="url(#filter-10)" xlink:href="#path-9"></use>
+                            </g>
+                            <g id="Text-1" transform="translate(110.000000, 42.000000)">
+                                <rect id="Rectangle-53" fill="#CFD3D6" x="0" y="50" width="111" height="9" rx="1"></rect>
+                                <rect id="Rectangle-53" fill="#CFD3D6" x="0" y="37" width="106" height="9" rx="1"></rect>
+                                <rect id="Rectangle-53" fill="#CFD3D6" x="0" y="25" width="116" height="9" rx="1"></rect>
+                                <rect id="Rectangle-53" fill="#ACB2B8" x="0" y="0" width="62" height="12" rx="1"></rect>
+                            </g>
+                            <g id="Text-1" transform="translate(259.000000, 42.000000)">
+                                <rect id="Rectangle-53" fill="#CFD3D6" x="0" y="50" width="111" height="9" rx="1"></rect>
+                                <rect id="Rectangle-53" fill="#CFD3D6" x="0" y="37" width="106" height="9" rx="1"></rect>
+                                <rect id="Rectangle-53" fill="#CFD3D6" x="0" y="25" width="116" height="9" rx="1"></rect>
+                                <rect id="Rectangle-53" fill="#ACB2B8" x="0" y="0" width="62" height="12" rx="1"></rect>
+                            </g>
+                            <g id="Text-1" transform="translate(408.000000, 42.000000)">
+                                <rect id="Rectangle-53" fill="#CFD3D6" x="0" y="50" width="111" height="9" rx="1"></rect>
+                                <rect id="Rectangle-53" fill="#CFD3D6" x="0" y="37" width="106" height="9" rx="1"></rect>
+                                <rect id="Rectangle-53" fill="#CFD3D6" x="0" y="25" width="116" height="9" rx="1"></rect>
+                                <rect id="Rectangle-53" fill="#ACB2B8" x="0" y="0" width="62" height="12" rx="1"></rect>
+                            </g>
+                            <g id="Social" transform="translate(556.000000, 41.000000)">
+                                <rect id="Rectangle-53" fill="#CFD3D6" x="0" y="26" width="35" height="35" rx="3"></rect>
+                                <rect id="Rectangle-53" fill="#CFD3D6" x="51" y="26" width="35" height="35" rx="3"></rect>
+                                <rect id="Rectangle-53" fill="#CFD3D6" x="100" y="26" width="35" height="35" rx="3"></rect>
+                                <rect id="Rectangle-53" fill="#ACB2B8" x="0" y="0" width="92" height="12" rx="1"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+          </svg>
+        </button>
+        <button class="shadow-md bg-white w-full h-24 mb-4"></button>
+        <button class="shadow-md bg-white w-full h-24 mb-4"></button>
+        <button class="shadow-md bg-white w-full h-24 mb-4"></button>
+        <button class="shadow-md bg-white w-full h-24 mb-4"></button>
+        <button class="shadow-md bg-white w-full h-24 mb-4"></button>
+        <button class="shadow-md bg-white w-full h-24 mb-4"></button>
+        <button class="shadow-md bg-white w-full h-24 mb-4"></button>
+        <button class="shadow-md bg-white w-full h-24 mb-4"></button>
+        <button class="shadow-md bg-white w-full h-24 mb-4"></button>
+        <button class="shadow-md bg-white w-full h-24 mb-4"></button>
       </div>
-      <div class="flex text-center h-16">
-        <a href="#" class="flex-1 pt-5 pb-2 bg-gray-800 text-white">MENU</a>
-        <a href="#" class="flex-1 pt-5 pb-2 bg-gray-800 text-white">MENU</a>
-        <a href="#" class="flex-1 pt-5 pb-2 bg-gray-800 text-white">MENU</a>
+      <div class="flex text-center h-16 bg-gray-800">
+        <a href="#" class="flex-1 pt-5 pb-4 text-white">MENU</a>
+        <a href="#" class="flex-1 pt-5 pb-4 text-white">MENU</a>
+        <a href="#" class="flex-1 pt-5 pb-4 text-white">MENU</a>
       </div>
     </div>
   </nav>
