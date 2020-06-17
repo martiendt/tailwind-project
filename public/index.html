@@ -4,6 +4,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="/build/tailwind.css">
+  <link rel="stylesheet" href="plugins/primsjs/themes/prism-tomorrow.css">
+  <link rel="stylesheet" href="plugins/primsjs/plugins/line-numbers/prism-line-numbers.css">
+  
   <style>
     /* Hide scrollbar */
     .side-menu::-webkit-scrollbar {
@@ -17,12 +20,13 @@
   </style>
 </head>
 <body class="flex">
-  <header class="flex shadow-md flex-1 flex-col fixed mx-56 w-full h-16 bg-gray-100 text-gray-900 p-5">
+  <header class="flex flex-col fixed mx-56 w-full h-16 p-5 z-10">
     <div class="flex justify-between mr-56">
-      <div>TITLE</div>
+      <div class="mr-5">x</div>
+      <div class="flex-grow font-light lowercase">COMPONENTS > BLOGS > 3 COLUMN BLOGS</div>
       <div class="flex">
-        <div class="mr-5">TOGGLE PREVIEW</div>
-        <div class="mr-5">DEVICE</div>
+        <div class="mr-5" onclick="preview()">TOGGLE PREVIEW</div>
+        <div class="mr-5" onclick="previewCode()">DEVICE</div>
         <div class="flex">
           <div class="px-1">LIGHT</div>
           <div class="px-1">DARK</div>
@@ -30,11 +34,11 @@
       </div>
     </div>
   </header>
-  <nav class="flex flex-col shadow-inner w-56 h-screen bg-gray-300">
-    <div class="flex flex-col fixed w-56 h-screen bg-gray-700">
-      <div class="h-16 w-full shadow-md p-5 bg-gray-800 text-gray-100 text-center">LOGO</div>
-      <div class="side-menu p-4 h-screen overflow-y-scroll">
-        <button class="shadow-md bg-white w-full h-32 mb-4">
+  <nav class="flex flex-col shadow-inner w-56 h-screen">
+    <div class="flex flex-col fixed w-56 h-screen">
+      <div class="h-16 w-full shadow-md p-5 bg-gray-800 text-gray-200 text-center">LOGO</div>
+      <div class="side-menu p-4 h-screen bg-gray-800 overflow-y-scroll">
+        <button onclick="a()" class="shadow-md bg-white w-full h-32 mb-4">
           <svg class="p-2" width="100%" height="100%" viewBox="0 0 800 1021" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <defs>
                 <rect id="path-1" x="0" y="0" width="800" height="1054" rx="7"></rect>
@@ -243,7 +247,7 @@
             </g>
           </svg>
         </button>
-        <button class="shadow-md bg-white w-full h-24 mb-4"></button>
+        <button onclick="b()" class="shadow-md bg-white w-full h-24 mb-4">SECTION</button>
         <button class="shadow-md bg-white w-full h-24 mb-4"></button>
         <button class="shadow-md bg-white w-full h-24 mb-4"></button>
         <button class="shadow-md bg-white w-full h-24 mb-4"></button>
@@ -254,15 +258,47 @@
         <button class="shadow-md bg-white w-full h-24 mb-4"></button>
         <button class="shadow-md bg-white w-full h-24 mb-4"></button>
       </div>
-      <div class="flex text-center h-16 bg-gray-800">
-        <a href="#" class="flex-1 pt-5 pb-4 text-white">MENU</a>
-        <a href="#" class="flex-1 pt-5 pb-4 text-white">MENU</a>
-        <a href="#" class="flex-1 pt-5 pb-4 text-white">MENU</a>
+      <div class="flex text-center h-16 bg-gray-800 text-gray-200">
+        <a href="#" class="flex-1 pt-5 pb-4">MENU</a>
+        <a href="#" class="flex-1 pt-5 pb-4">MENU</a>
+        <a href="#" class="flex-1 pt-5 pb-4">MENU</a>
       </div>
     </div>
   </nav>
-  <main class="flex-1 w-full mt-16 bg-gray-100">
-    <iframe id="preview" src="http://127.0.0.1:8080/example.html" frameborder="0" class="w-full h-screen"></iframe>
+  <main class="flex flex-col flex-1 w-screen h-screen">
+    <div class="h-16"></div>
+    <pre id="code-preview" class="flex-1 flex-grow hidden language-markup line-numbers overflow-x-auto" style="margin:0;">
+      <code style="padding-top: 3px">
+        <xmp>
+          <h1>Test</h1>
+          <div class="mr-5">TOGGLE PREVIEW</div>
+          <div class="mr-5">DEVICE.</div>
+          <div class="flex">
+            <div class="px-1">LIGHT</div>
+            <div class="px-1">DARK</div>
+          </div>
+        </xmp>
+      </code>
+    </pre>
+    <iframe id="preview" src="http://127.0.0.1:8080/example.html" frameborder="0" class="w-full flex-1"></iframe>
   </main>
+  <script>
+    function a() {
+      const preview = document.getElementById('preview')
+      preview.src = 'https://point.red'
+    }
+    function b() {
+      const preview = document.getElementById('preview')
+      preview.src = 'http://127.0.0.1:8080/example.html'
+    }
+
+    function preview() {
+      document.getElementById('preview').classList.toggle('hidden')
+      document.getElementById('code-preview').classList.toggle('hidden')
+    }
+  </script>
+  <script src="plugins/primsjs/prism.js"></script>
+  <script src="plugins/primsjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+  <script src="plugins/primsjs/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
 </body>
 </html>
