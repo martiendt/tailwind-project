@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="capture" style=" background: #f5da55">
+    <h4 style="color: #000; ">Hello world!</h4>
+  </div>
+  <script src="plugins/html2canvas/dist/html2canvas.min.js"></script>
+  <script>
+    html2canvas(document.querySelector("#capture"))
+      .then(function (canvas) {
+        console.log('here')
+        document.body.appendChild(canvas)
+        console.log(canvas.toDataURL("image/png"))
+        var imgageData = canvas.toDataURL("image/png")
+        // window.location.href = 'screenshot.hmtl?'+ImageData
+      })
+    // html2canvas(document.querySelector("#capture")).then(canvas => {
+    //     document.body.appendChild(canvas)
+    //     var imgageData = getCanvas.toDataURL("image/png")
+    // });
+    document.getElementById('capture').style.display = 'none';
+  </script>
+</body>
+</html>
